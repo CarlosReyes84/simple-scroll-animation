@@ -1,0 +1,31 @@
+*,**::after, **::before {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: bisque;
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    overflow-x: hidden;
+}
+h1 {
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+.card {
+    width: 325px;
+    height: 225px;
+    background-color: royalblue;
+    border-radius: 25px;
+    transform: translateX(1550px);
+    transition: transform 1s ease; 
+}
+.card:nth-of-type(even) {
+    transform: translateX(-1550px);
+}
+.card.show {
+    transform: translateX(0);
+}
